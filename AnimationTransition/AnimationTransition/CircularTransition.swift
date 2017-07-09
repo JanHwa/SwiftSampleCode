@@ -74,6 +74,7 @@ extension CircularTransition:UIViewControllerAnimatedTransitioning {
             if let returningView = transitionContext.view(forKey: transitionModeKey) {
                 let viewCenter = returningView.center
                 let viewSize = returningView.frame.size
+                returningView.center = self.startingPoint
                 
                 circle.frame = frameForCircle(withViewCenter: viewCenter, size: viewSize, startPoint: startingPoint)
                 circle.center = startingPoint
@@ -89,7 +90,7 @@ extension CircularTransition:UIViewControllerAnimatedTransitioning {
                     }
                     
                 }, completion: { (success:Bool) in
-                    returningView.center = viewCenter
+                    
                     returningView.removeFromSuperview()
                     self.circle.removeFromSuperview()
                     transitionContext.completeTransition(success)
