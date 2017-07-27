@@ -111,16 +111,6 @@ extension CircularTransition:UIViewControllerAnimatedTransitioning {
         
         return CGRect(origin: CGPoint.zero, size: size)
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
     
 }
