@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YNN-xt-kMP">
+                                <rect key="frame" x="80" y="170" width="215" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Di2-uD-Bh5">
+                                <rect key="frame" x="80" y="270" width="215" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgh-1F-LQG">
+                                <rect key="frame" x="172" y="358" width="31" height="30"/>
+                                <state key="normal" title="进入"/>
+                                <connections>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nmf-Ww-e6Z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="staus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqd-XU-bmA">
+                                <rect key="frame" x="0.0" y="86" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nqd-XU-bmA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="0g5-r1-TuP"/>
+                            <constraint firstItem="YNN-xt-kMP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="4VK-cI-wir"/>
+                            <constraint firstItem="YNN-xt-kMP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IF3-eR-1mc"/>
+                            <constraint firstItem="Nqd-XU-bmA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NTm-dv-VY7"/>
+                            <constraint firstItem="Nqd-XU-bmA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Nu4-q6-Kad"/>
+                            <constraint firstItem="kgh-1F-LQG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XkE-ag-fL5"/>
+                            <constraint firstItem="YNN-xt-kMP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="a7p-6R-6Lo"/>
+                            <constraint firstItem="Di2-uD-Bh5" firstAttribute="centerX" secondItem="YNN-xt-kMP" secondAttribute="centerX" id="cha-KC-IpL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YNN-xt-kMP" secondAttribute="trailing" constant="80" id="exq-2A-dwD"/>
+                            <constraint firstItem="Di2-uD-Bh5" firstAttribute="leading" secondItem="YNN-xt-kMP" secondAttribute="leading" id="lzY-cI-EG5"/>
+                            <constraint firstItem="kgh-1F-LQG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="338" id="vJ2-4n-SnF"/>
+                            <constraint firstItem="Di2-uD-Bh5" firstAttribute="trailing" secondItem="YNN-xt-kMP" secondAttribute="trailing" id="wGa-2f-5WE"/>
+                            <constraint firstItem="Di2-uD-Bh5" firstAttribute="top" secondItem="YNN-xt-kMP" secondAttribute="top" constant="100" id="yan-RZ-caR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="accountTextField" destination="YNN-xt-kMP" id="0bp-S9-cmy"/>
+                        <outlet property="passwordTextField" destination="Di2-uD-Bh5" id="u8b-kM-SRp"/>
+                        <outlet property="stateLabel" destination="Nqd-XU-bmA" id="1Bj-dy-eEG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

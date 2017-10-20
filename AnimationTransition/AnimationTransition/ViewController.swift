@@ -16,9 +16,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         presentButton.layer.cornerRadius = presentButton.frame.size.width / 2
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
