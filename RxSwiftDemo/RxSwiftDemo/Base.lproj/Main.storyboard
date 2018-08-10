@@ -1,112 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="h6O-3d-eKS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bSa-m4-i2Y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Home-->
-        <scene sceneID="ICY-Kf-QfA">
+        <scene sceneID="Utf-WP-zb4">
             <objects>
-                <tableViewController id="8YF-A4-fdB" customClass="HomeTableViewController" customModule="RxSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AmG-vG-cPb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="fHR-6R-LW6">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fHR-6R-LW6" id="6bZ-9I-xjs">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="8YF-A4-fdB" id="qom-LR-PeB"/>
-                            <outlet property="delegate" destination="8YF-A4-fdB" id="feh-n7-pJr"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="QxB-Xb-UpA"/>
-                    <connections>
-                        <segue destination="Qoi-bW-BCt" kind="show" identifier="notification" id="BHN-YF-55o"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DzK-Om-H4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="628" y="142.57871064467767"/>
-        </scene>
-        <!--Notification View Controller-->
-        <scene sceneID="4m5-Lt-6cj">
-            <objects>
-                <viewController id="Qoi-bW-BCt" customClass="NotificationViewController" customModule="RxSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UXf-cH-CyB" customClass="HomeViewController" customModule="RxSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Y2d-t3-8wG"/>
-                        <viewControllerLayoutGuide type="bottom" id="K7Z-qg-CYT"/>
+                        <viewControllerLayoutGuide type="top" id="RvZ-OB-dw5"/>
+                        <viewControllerLayoutGuide type="bottom" id="19P-Ub-PgB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OzQ-BC-ytS">
+                    <view key="view" contentMode="scaleToFill" id="8qw-pJ-SHf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8B-69-Zhr">
-                                <rect key="frame" x="0.0" y="84" width="375" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="sfV-au-btz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-6R-bmU">
-                                <rect key="frame" x="130" y="185" width="114" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="B68-Nh-9lG"/>
-                                </constraints>
-                                <state key="normal" title="Post Notification"/>
-                                <connections>
-                                    <action selector="postNotificationButton:" destination="Qoi-bW-BCt" eventType="touchUpInside" id="6hT-Ak-Qoy"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tla-SL-sVl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="z8B-69-Zhr" firstAttribute="centerX" secondItem="OzQ-BC-ytS" secondAttribute="centerX" id="2q7-Me-iYy"/>
-                            <constraint firstItem="z8B-69-Zhr" firstAttribute="width" secondItem="OzQ-BC-ytS" secondAttribute="width" id="bHG-KA-MDf"/>
-                            <constraint firstItem="Kxg-6R-bmU" firstAttribute="centerX" secondItem="OzQ-BC-ytS" secondAttribute="centerX" id="ffs-Q3-EJM"/>
-                            <constraint firstItem="Kxg-6R-bmU" firstAttribute="top" secondItem="z8B-69-Zhr" secondAttribute="bottom" constant="80" id="kGF-8s-gbf"/>
-                            <constraint firstItem="z8B-69-Zhr" firstAttribute="top" secondItem="Y2d-t3-8wG" secondAttribute="bottom" constant="20" id="zDS-ug-Nkb"/>
+                            <constraint firstAttribute="trailing" secondItem="Tla-SL-sVl" secondAttribute="trailing" id="4b3-XR-tJx"/>
+                            <constraint firstItem="19P-Ub-PgB" firstAttribute="top" secondItem="Tla-SL-sVl" secondAttribute="bottom" id="6fl-Cx-gfh"/>
+                            <constraint firstItem="Tla-SL-sVl" firstAttribute="top" secondItem="RvZ-OB-dw5" secondAttribute="bottom" id="VjH-Dw-JHy"/>
+                            <constraint firstItem="Tla-SL-sVl" firstAttribute="leading" secondItem="8qw-pJ-SHf" secondAttribute="leading" id="zXJ-47-yLI"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="hqN-Gx-Ntr"/>
                     <connections>
-                        <outlet property="stateLabel" destination="z8B-69-Zhr" id="yMb-Ot-RK3"/>
+                        <outlet property="tableView" destination="Tla-SL-sVl" id="6eh-BS-g1B"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDg-o9-BdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIa-3D-uNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1352.8" y="142.57871064467767"/>
+            <point key="canvasLocation" x="1600.8" y="148.87556221889056"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="7hA-Mf-ioa">
+        <scene sceneID="z3k-qO-TtQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h6O-3d-eKS" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bSa-m4-i2Y" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JlA-M7-guQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="87T-vr-rEw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8YF-A4-fdB" kind="relationship" relationship="rootViewController" id="gXG-bS-w4P"/>
+                        <segue destination="UXf-cH-CyB" kind="relationship" relationship="rootViewController" id="z7V-Vi-Pzs"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3fG-Tk-5r3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVm-8W-mK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-311.19999999999999" y="142.57871064467767"/>
+            <point key="canvasLocation" x="661.60000000000002" y="148.87556221889056"/>
         </scene>
     </scenes>
 </document>
