@@ -20,6 +20,4 @@ class BaseViewController: UIViewController {
 
         
     }
-
- 
 }
