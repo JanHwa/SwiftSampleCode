@@ -22,7 +22,7 @@ extension Reactive where Base: BaseMainView {
         return RxBaseMainViewDelegateProxy.installForwardDelegate(delegate , retainDelegate: false, onProxyForObject: self.base)
     }
     
-    internal var didSelectRowAt: ControlEvent<(mainView: BaseMainView,tableView: UITableView, indexPath: IndexPath)> {
+    internal var didSelectRow: ControlEvent<(mainView: BaseMainView,tableView: UITableView, indexPath: IndexPath)> {
         let source: Observable<(mainView: BaseMainView,tableView: UITableView, indexPath: IndexPath)> = self.delegate.methodInvoked(#selector(BaseMainViewDelegate.mainView(_:tableView:didSelectRowAt:)))
             .map { a in
                 return (a.first as! BaseMainView,a[1] as! UITableView, a[2] as!IndexPath )
@@ -30,7 +30,7 @@ extension Reactive where Base: BaseMainView {
         return ControlEvent(events: source)
     }
     
-    internal var didDeselectRowAt: ControlEvent<(mainView: BaseMainView,tableView: UITableView, indexPath: IndexPath)> {
+    internal var didDeselectRow: ControlEvent<(mainView: BaseMainView,tableView: UITableView, indexPath: IndexPath)> {
         let source: Observable<(mainView: BaseMainView,tableView: UITableView, indexPath: IndexPath)> = self.delegate.methodInvoked(#selector(BaseMainViewDelegate.mainView(_:tableView:didSelectRowAt:)))
             .map { a in
                 return (a.first as! BaseMainView,a[1] as! UITableView, a[2] as!IndexPath )

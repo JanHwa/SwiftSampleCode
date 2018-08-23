@@ -7,17 +7,33 @@
 //
 
 import UIKit
+import RealmSwift
+import RxRealm
+import RxCocoa
+import RxSwift
 
 class HomeViewModel: BaseViewModel {
 
     override init() {
         super.init()
-        provider.rx.request(.home(page: 1))
-            .mapModel(AuthorModelData.self)
-            .subscribe(onSuccess: { (model) in
-                print("model:\(model)")
-            }) { (error) in
-                print("error:\(error)")
-            }.disposed(by: disposeBag)
+        
+        
+        
+    }
+    
+    var model: AuthorModelData?
+    
+    
+    override func request(onSuccess: ((BaseViewModel) -> Void)?, onError: ((Error) -> Void)?){
+        
+        provider.rx
+        .request(.home(page: page))
+        .mapModel(AuthorModelData.self)
+        .subscribe(onSuccess: { [weak self](model) in
+            self?.model = model
+            onSuccess!(self!)
+        }) { (error) in
+            onError!(error)
+        }.disposed(by: disposeBag)
     }
 }

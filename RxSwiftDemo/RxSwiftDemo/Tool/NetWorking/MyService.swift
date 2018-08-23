@@ -16,10 +16,8 @@ enum MyService {
 }
 
 
-
 // MARK: - TargetType Protocol Implementation
 extension MyService: TargetType {
-
     
     var baseURL: URL {
         return URL(string: "http://pc.weilaicaijing.com")!

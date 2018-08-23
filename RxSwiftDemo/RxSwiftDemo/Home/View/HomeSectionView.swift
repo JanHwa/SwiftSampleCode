@@ -40,6 +40,10 @@ class HomeSectionView: UIView {
     
     @IBAction func clickButton(_ sender: UIButton) {
         self.delegate?.didSelectButton!(button: sender,model: "model-----Succeed")
+        
+        let source = Observable.just(sender)
+        
+        
     }
     /*
     // Only override draw() if you perform custom drawing.

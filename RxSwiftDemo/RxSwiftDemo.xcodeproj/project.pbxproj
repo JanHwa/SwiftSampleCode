@@ -16,6 +16,10 @@
 		C504620E212AB06B009585DC /* HomeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504620D212AB06B009585DC /* HomeMainView.swift */; };
 		C5046210212AB548009585DC /* RxBaseMainViewDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C504620F212AB548009585DC /* RxBaseMainViewDelegateProxy.swift */; };
 		C5046212212AB563009585DC /* BaseMainView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5046211212AB563009585DC /* BaseMainView+Rx.swift */; };
+		C5046214212BB8C8009585DC /* RxBaseViewModel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5046213212BB8C8009585DC /* RxBaseViewModel+Rx.swift */; };
+		C5046216212BB8DD009585DC /* RxBaseViewModelDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5046215212BB8DD009585DC /* RxBaseViewModelDelegateProxy.swift */; };
+		C5046227212D13BB009585DC /* AuthorRealmModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5046224212D13BB009585DC /* AuthorRealmModelData.swift */; };
+		C5046228212D13BB009585DC /* AuthorRealmModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5046225212D13BB009585DC /* AuthorRealmModelList.swift */; };
 		C52C4E7A2124026E005B206A /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C4E792124026E005B206A /* MyService.swift */; };
 		C52C4E8D212568C4005B206A /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C4E8A212568C4005B206A /* HomeList.swift */; };
 		C52C4E8E212568C4005B206A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C4E8B212568C4005B206A /* Home.swift */; };
@@ -74,6 +78,10 @@
 		C504620D212AB06B009585DC /* HomeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainView.swift; sourceTree = "<group>"; };
 		C504620F212AB548009585DC /* RxBaseMainViewDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxBaseMainViewDelegateProxy.swift; sourceTree = "<group>"; };
 		C5046211212AB563009585DC /* BaseMainView+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseMainView+Rx.swift"; sourceTree = "<group>"; };
+		C5046213212BB8C8009585DC /* RxBaseViewModel+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxBaseViewModel+Rx.swift"; sourceTree = "<group>"; };
+		C5046215212BB8DD009585DC /* RxBaseViewModelDelegateProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxBaseViewModelDelegateProxy.swift; sourceTree = "<group>"; };
+		C5046224212D13BB009585DC /* AuthorRealmModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorRealmModelData.swift; sourceTree = "<group>"; };
+		C5046225212D13BB009585DC /* AuthorRealmModelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorRealmModelList.swift; sourceTree = "<group>"; };
 		C52C4E792124026E005B206A /* MyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 		C52C4E8A212568C4005B206A /* HomeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		C52C4E8B212568C4005B206A /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -187,12 +195,14 @@
 		C5671C31212160EA003E14E5 /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				C504620A212A9EE7009585DC /* BaseMainView.swift */,
+				C5046211212AB563009585DC /* BaseMainView+Rx.swift */,
 				C5671C32212160EA003E14E5 /* BaseViewController.swift */,
 				C5671C33212160EA003E14E5 /* BaseViewController.xib */,
 				C5046206212A9403009585DC /* BaseViewModel.swift */,
-				C504620A212A9EE7009585DC /* BaseMainView.swift */,
 				C504620F212AB548009585DC /* RxBaseMainViewDelegateProxy.swift */,
-				C5046211212AB563009585DC /* BaseMainView+Rx.swift */,
+				C5046213212BB8C8009585DC /* RxBaseViewModel+Rx.swift */,
+				C5046215212BB8DD009585DC /* RxBaseViewModelDelegateProxy.swift */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -232,6 +242,8 @@
 		C5671C4921216157003E14E5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C5046224212D13BB009585DC /* AuthorRealmModelData.swift */,
+				C5046225212D13BB009585DC /* AuthorRealmModelList.swift */,
 				C5525ECC21266E3700E1C84C /* AuthorModel.swift */,
 				C5525ECA21266E3600E1C84C /* AuthorModelData.swift */,
 				C5525ECB21266E3700E1C84C /* AuthorModelList.swift */,
@@ -591,6 +603,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5046228212D13BB009585DC /* AuthorRealmModelList.swift in Sources */,
 				C5671C4E21216274003E14E5 /* HomeSectionModel.swift in Sources */,
 				C5046209212A9429009585DC /* HomeViewModel.swift in Sources */,
 				C5525ECF21266E3700E1C84C /* AuthorModel.swift in Sources */,
@@ -598,9 +611,12 @@
 				C5525ECE21266E3700E1C84C /* AuthorModelList.swift in Sources */,
 				C5046207212A9403009585DC /* BaseViewModel.swift in Sources */,
 				C5046212212AB563009585DC /* BaseMainView+Rx.swift in Sources */,
+				C5046216212BB8DD009585DC /* RxBaseViewModelDelegateProxy.swift in Sources */,
+				C5046227212D13BB009585DC /* AuthorRealmModelData.swift in Sources */,
 				C5046202212A69C4009585DC /* Observable+ObjectMapper.swift in Sources */,
 				C52C4E7A2124026E005B206A /* MyService.swift in Sources */,
 				C52C4E8E212568C4005B206A /* Home.swift in Sources */,
+				C5046214212BB8C8009585DC /* RxBaseViewModel+Rx.swift in Sources */,
 				C5671C762122B1DF003E14E5 /* HomeSectionView+Rx.swift in Sources */,
 				C5046210212AB548009585DC /* RxBaseMainViewDelegateProxy.swift in Sources */,
 				C52C4E8D212568C4005B206A /* HomeList.swift in Sources */,

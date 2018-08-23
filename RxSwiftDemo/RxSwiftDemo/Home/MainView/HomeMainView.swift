@@ -15,7 +15,7 @@ class HomeMainView: BaseMainView,UITableViewDelegate {
 
     var tableView: UITableView?
     
-    func configTableView(tableView: UITableView) -> Void {
+    func configTableView(tableView: UITableView) {
         self.tableView = tableView
         
         tableView.tableFooterView = UIView()
@@ -66,7 +66,6 @@ class HomeMainView: BaseMainView,UITableViewDelegate {
                 self?.delegate?.mainView!(self!, tableView: (self?.tableView)!, didSelectRowAt: value)
             })
             .disposed(by: disposeBag)
-        
     }
 }
 
