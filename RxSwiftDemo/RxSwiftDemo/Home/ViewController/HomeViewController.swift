@@ -15,7 +15,7 @@ import Alamofire
 import SwiftyJSON
 import RxRealm
 import RealmSwift
-
+import CloudKit
 
 class HomeViewController: BaseViewController {
 
@@ -30,9 +30,12 @@ class HomeViewController: BaseViewController {
         let mainView = HomeMainView()
         return mainView
     }()
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let publicDB = CKContainer.default().publicCloudDatabase
         
         mainView.configTableView(tableView: tableView)
         
